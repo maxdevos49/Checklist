@@ -1,0 +1,136 @@
+:root{
+    --background-color: rgb(255, 255, 255);
+    --primary-color: rgb(52, 117, 214);
+    --secondary-color: rgb(233, 233, 233);
+    --light-color: rgb(202, 202, 202);
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    background-color: var(--secondary-color);
+    color: rgb(0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+p,p.note, code, a{
+    margin: 5px 0;
+}
+
+p{
+    font-family: Helvetica;
+}
+
+header{
+    padding: 10px;
+    color: white;
+    background-color: var(--primary-color);
+}
+
+footer{
+    margin: 0;
+    padding: 5px 0;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    background-color: var(--secondary-color);
+    ;
+}
+
+a[href=""]{
+    color: red;
+}
+
+label{
+    width: 100%
+}
+
+div#list-body{
+    padding: 10px;
+    background-color: var(--background-color);
+}
+
+div.field {
+    margin: 10px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.3s;
+    color: black;
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+div.field.hide>div.field-header{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+div.field>div.field-description{
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+div.field.hide>div.field-description{
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+div.field.active {
+    color: white;
+    background-color: var(--primary-color);
+}
+
+div.field-header {
+    margin: 0;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: 0.3s;
+    background-color: var(--light-color);
+}
+
+div.field-header>input {
+    margin: 0 5px;
+}
+
+div.field-header>label {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    width: 100%;
+}
+
+div.field-description {
+    margin: 0;
+    padding: 8px;
+    height: auto
+}
+
+p.note {
+    color: rgb(24, 22, 22);
+    background-color: rgb(250, 239, 192);
+    background: linear-gradient(90deg, rgba(168,170,127,1) 5px, rgba(251,252,141,1) 5px);
+    padding: 3px 6px;
+    border-radius: 5px;
+}
